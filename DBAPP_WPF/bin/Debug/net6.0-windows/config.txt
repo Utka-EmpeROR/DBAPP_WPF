@@ -1,0 +1,7 @@
+Language = En
+AdminPassword = qwerty
+LastUsedDB:>C:\Users\maxim\source\repos\DBAPP_WPF\DBAPP_WPF\InterspectekDB.mdb
+AccessLevel: 2 Records;
+AccessLevel: 3 Operations;Records;
+User: admin2 222 1
+User: user123 555 1

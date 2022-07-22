@@ -1,0 +1,50 @@
+﻿<Window x:Class="DBAPP_WPF.AdminPanelWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DBAPP_WPF"
+        mc:Ignorable="d"
+        MinHeight="400" MinWidth="650"
+        Title="{DynamicResource adminPanel}" Height="450" Width="800" Closed="Adm1_Closed">
+    <Viewbox>
+        <Grid Height="450" Width="800">
+            <TabControl>
+                <TabItem Header="{DynamicResource userOptions}" FontSize="18">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox x:Name="UsernameListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="36,63,558,219" SelectionChanged="UsernameListBox_Changed"/>
+                        <ListBox x:Name="AccessLevel1ListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="278,63,429,269"/>
+                        <TextBox x:Name="Password1TextBox" HorizontalAlignment="Left" Margin="36,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                        <Label Content="{DynamicResource username}" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="127"/>
+                        <Label Content="{DynamicResource accessLvl}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="256,22,0,0" FontSize="18"/>
+                        <Label Content="{DynamicResource password}" HorizontalAlignment="Left" Margin="36,207,0,0" VerticalAlignment="Top" Width="120"/>
+                        <Button x:Name="DeleteUserButton" Content="{DynamicResource deleteUser}" HorizontalAlignment="Left" Margin="36,295,0,0" VerticalAlignment="Top" Width="147" Height="32" FontSize="18" Click="DeleteUserButton_Click"/>
+                        <Button x:Name="SaveChangesUserButton" Content="{DynamicResource saveChanges}" HorizontalAlignment="Left" Margin="218,295,0,0" VerticalAlignment="Top" Width="147" Height="32" FontSize="18" Click="SaveChangesUserButton_Click"/>
+                        <Label Content="{DynamicResource ResourceKey=accessLvl}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="138" Margin="629,0,0,0" FontSize="18"/>
+                        <Label Content="{DynamicResource ResourceKey=username}" HorizontalAlignment="Left" Margin="629,22,0,0" VerticalAlignment="Top" Width="138"/>
+                        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Margin="629,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+                        <ListBox x:Name="AccessLevel2ListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="629,229,78,103"/>
+                        <Label Content="{DynamicResource ResourceKey=password}" HorizontalAlignment="Left" Margin="629,112,0,0" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="Password2TextBox" HorizontalAlignment="Left" Margin="629,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+                        <Button x:Name="CreateUserButton" Content="{DynamicResource createUser}" HorizontalAlignment="Left" Margin="629,334,0,0" VerticalAlignment="Top" Width="138" Height="32" FontSize="18" Click="CreateUserButton_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{DynamicResource accessLvlOptions}" FontSize="18">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox x:Name="Functions1CheckedListBox" SelectionMode="Multiple" Margin="82,184,547,91" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                        <ListBox x:Name="Functions2CheckedListBox" SelectionMode="Multiple" Margin="543,184,86,91" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                        <ListBox x:Name="ChangeAccessLevelListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="82,47,614,284" SelectionChanged="ChangeAccessLevelListBox_Changed"/>
+                        <Label Content="{DynamicResource permittedFunctions}" HorizontalAlignment="Left" Margin="82,143,0,0" VerticalAlignment="Top" Width="165"/>
+                        <Label Content="{DynamicResource accessLvl}" HorizontalAlignment="Left" Margin="82,8,0,0" VerticalAlignment="Top" Width="141"/>
+                        <Label Content="{DynamicResource accessLvl}" HorizontalAlignment="Left" Margin="543,18,0,0" VerticalAlignment="Top" Width="165"/>
+                        <Label Content="{DynamicResource permittedFunctions}" HorizontalAlignment="Left" Margin="543,143,0,0" VerticalAlignment="Top" Width="165"/>
+                        <TextBox x:Name="AccessLevelTextBox" HorizontalAlignment="Left" Margin="543,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                        <Button x:Name="DeleteLvlButton" Content="{DynamicResource deleteLvl}" HorizontalAlignment="Left" Margin="201,63,0,0" VerticalAlignment="Top" Height="40" Width="165" Click="DeleteLvlButton_Click"/>
+                        <Button x:Name="SaveLvlChangesButton" Content="{DynamicResource saveChanges}" HorizontalAlignment="Left" Margin="94,349,0,0" VerticalAlignment="Top" Height="42" Width="141" Click="SaveLvlChangesButton_Click"/>
+                        <Button x:Name="CreateLvlButton" Content="{DynamicResource createLvl}" HorizontalAlignment="Left" Margin="523,349,0,0" VerticalAlignment="Top" Height="42" Width="205" Click="CreateLvlButton_Click"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Viewbox>
+</Window>
